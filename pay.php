@@ -78,7 +78,7 @@ $json = json_encode($data);
 ?>
 
 
-<form action="verify.html" method="POST">
+<form action="verify.php" method="POST">
   <script
     src="https://checkout.razorpay.com/v1/checkout.js"
     data-key="<?php echo $data['key']?>"
