@@ -1,148 +1,69 @@
- <!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {
-  font-family: Arial;
-  font-size: 17px;
-  padding: 8px;
-}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-* {
-  box-sizing: border-box;
-}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-.row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  margin: 0 -16px;
-}
-
-.col-25 {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
-}
-
-.col-50 {
-  -ms-flex: 50%; /* IE10 */
-  flex: 50%;
-}
-
-.col-75 {
-  -ms-flex: 75%; /* IE10 */
-  flex: 75%;
-}
-
-.col-25,
-.col-50,
-.col-75 {
-  padding: 0 16px;
-}
-
-.container {
-  background-color: #f2f2f2;
-  padding: 5px 20px 15px 20px;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
-}
-
-input[type=text] {
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-label {
-  margin-bottom: 10px;
-  display: block;
-}
-
-.icon-container {
-  margin-bottom: 20px;
-  padding: 7px 0;
-  font-size: 24px;
-}
-
-.btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  width: 100%;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 17px;
-}
-
-.btn:hover {
-  background-color: #45a049;
-}
-
-a {
-  color: #2196F3;
-}
-
-hr {
-  border: 1px solid lightgrey;
-}
-
-span.price {
-  float: right;
-  color: grey;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
-@media (max-width: 800px) {
-  .row {
-    flex-direction: column-reverse;
-  }
-  .col-25 {
-    margin-bottom: 20px;
-  } 
-}
-</style>
-</head>
-<body>
-
-
-<div class="row"  style="padding:100px 300px;">
-  <div class="col-50">
-    <div class="container" >
-      <form  action="pay.html" method="post" style="padding: 25px;">
+    <title>Contribution for Covid Relief Funds</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-sticky">
+        <a class="navbar-brand" href="#">
+            <img src="../img/money.png" width="55" height="55" class="d-inline-block align-bottom" alt="">
+        
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
       
-        <div class="row" >
-          <div class="col-25">
-            <h3 style="text-align: center;margin:20px 10px;font-family: lato;">I Would Like To Contribute For COVID-19 Relief Service</h3>
-          
-
-            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-            <input type="text" id="fname" name="name" placeholder="Mohit Saraf">
-            <label for="email"><i class="fa fa-envelope"></i> Email</label>
-            <input type="text" id="email" name="email" placeholder="mohit@example.com">
-            <label for="amount"><i class="fa fa-money"></i> Amount</label>
-            <input type="text" id="amount" name="amount" placeholder="10">
-            <label for="city"><i class="fa fa-mobile"></i> Mobile</label>
-            <input type="text" id="city" name="mobile" placeholder="99XXXXXX99">
-            <label for="message"><i class="fa fa-letter"></i> Message</label>
-            <input type="text" id="message" name="message" placeholder="Message">
-
-
-          
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Donate <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/razorpay-php/aboutus.html">About Us</a>
+            </li>
+          </ul>
         </div>
-       
-        <input type="submit"  value="Donate Now" class="btn">
-      </form>
+      </nav>
+      <div class="container bg-light my-5 p-3">
+      <form action="pay.php" method="post">
+        <div class="mb-3 mx-auto mt-5" style="width: 70%;">
+            <label for="exampleInputName1">Full Name</label>
+            <input type="text" class="form-control" id="exampleInputName1" name="name" placeholder="Enter Full Name">
+          </div>
+          <div class="mb-3 mx-auto mt-3" style="width: 70%;">
+            <label for="exampleInputEmail1">Email Address</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" name="email" placeholder="Enter Email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your contact details with anyone else.</small>
+          </div>
+          <div class="mb-3 mx-auto mt-3" style="width: 70%;">
+            <label for="exampleInputPhone1">Phone Number</label>
+            <input type="text" class="form-control" id="exampleInputPhone1" name="mobile" placeholder="Enter Phone Number">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your contact details with anyone else.</small>
+          </div>
+          <div class="mb-3 mx-auto mt-3" style="width: 70%;">
+          <label for="exampleInputAmount1">Amount</label>
+          <input type="text" class="form-control" id="exampleInputAmount1" name="amount" placeholder="Enter Amount">
+        </div>
+        <div class="mb-3 mx-auto mt-3" style="width: 70%;">
+          <label for="exampleInputMessage1">Message</label>
+          <input type="text" class="form-control" id="message" name="message" placeholder="Enter Message">
+        </div>
+        <div class="mb-3 mx-auto mt-5" style="width: 70%;">
+        <button type="submit" class="btn btn-outline-success btn-block">Donate Now</button>
     </div>
-  </div>
- 
-</div>
-
-</body>
+      </form>
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
 </html>

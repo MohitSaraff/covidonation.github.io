@@ -1,12 +1,12 @@
 <?php
 
-require('config.html');
+require('config.php');
 
 $conn = mysqli_connect($host, $username, $password, $dbname);
 
 session_start();
 
-require('razorpay-php/Razorpay.html');
+require('razorpay-php/Razorpay.php');
 use Razorpay\Api\Api;
 use Razorpay\Api\Errors\SignatureVerificationError;
 
